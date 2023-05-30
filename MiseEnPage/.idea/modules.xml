@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/mise_en_page/mise_en_page.iml" filepath="$PROJECT_DIR$/mise_en_page/mise_en_page.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mise_en_page/android/mise_en_page_android.iml" filepath="$PROJECT_DIR$/mise_en_page/android/mise_en_page_android.iml" />
+    </modules>
+  </component>
+</project>
