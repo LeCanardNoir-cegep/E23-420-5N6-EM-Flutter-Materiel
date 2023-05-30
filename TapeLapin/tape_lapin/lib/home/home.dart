@@ -78,7 +78,8 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
             SizedBox(height: 30),
-            Text("Kill the Rabbit"),
+            Text("Kill the Rabbit", style: Theme.of(context).textTheme.titleLarge),
+            SizedBox(height: 30),
             Row(mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 b0,
