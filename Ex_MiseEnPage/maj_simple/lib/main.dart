@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:maj_simple/DrapeauItalien.dart';
+import 'package:maj_simple/MajSimple2.dart';
 import 'package:maj_simple/PleinContainer.dart';
 
 import 'MajSimple.dart';
@@ -35,15 +36,13 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
-      ),
-      body: PleinContrainer()
-    );
+        appBar: AppBar(
+          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+          title: Text(widget.title),
+        ),
+        body: MajSimple2());
   }
 }
