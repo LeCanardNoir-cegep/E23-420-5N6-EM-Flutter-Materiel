@@ -7,6 +7,7 @@ import 'transfer.dart';
 class HttpService{
   late Dio _dio;
   static CookieManager cookieManager = CookieManager(CookieJar());
+  static const String BASE_URL = "10.0.2.2";
 
   HttpService(){
     _dio = _dio = Dio();
@@ -56,7 +57,7 @@ class HttpService{
   Future<SignupResponse> signup(SignupRequest req) async {
     try{
       var response = await _dio.post(
-          "http://10.0.2.2:8080/api/id/signup",
+          "http://$BASE_URL:8080/api/id/signup",
           data: req.toJson()
       );
       return SignupResponse.fromJson(response.data);
@@ -70,7 +71,7 @@ class HttpService{
   Future<SigninResponse> signin(SigninRequest req) async {
     try{
       var response = await _dio.post(
-          "http://10.0.2.2:8080/api/id/signin",
+          "http://$BASE_URL:8080/api/id/signin",
           data: req.toJson()
       );
       return SigninResponse.fromJson(response.data);
@@ -84,7 +85,7 @@ class HttpService{
   Future<String> signout() async {
     try{
       var response = await _dio.get(
-          "http://10.0.2.2:8080/api/id/signout"
+          "http://$BASE_URL:8080/api/id/signout"
       );
       return response.data;
     }catch(e,s){
@@ -99,7 +100,7 @@ class HttpService{
   Future<List<HomeResponse>> home() async {
     try{
       var response = await _dio.get(
-          "http://10.0.2.2:8080/api/home"
+          "http://$BASE_URL:8080/api/home"
       );
       var listJson = response.data as List;
       return listJson.map((e) => HomeResponse.fromJson(e)).toList();
