@@ -101,7 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
       LoaderDialog(context);
       List<HomeResponse> response = await HttpService().home();
       Navigator.pop(context);
-      print(response[0].toJson());
+      if(response.isNotEmpty) print(response[0].toJson());
     }on DioError catch(e){
       Navigator.pop(context);
       if( e.response != null ){
@@ -137,8 +137,9 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
-          /*await signin("Bruno", "1234");
-          await Future.delayed(Duration(seconds: 3));*/
+          await signin("Bruno", "1234");
+          //await signup("Bruno", "1234");
+          await Future.delayed(Duration(seconds: 3));
           await home();
         },
         tooltip: 'getHttp',
