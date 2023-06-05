@@ -1,7 +1,5 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:http_simple/http_github.dart';
-import 'package:http_simple/http_simple.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,24 +8,31 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  Map<String, WidgetBuilder> routes(){
-    return {
-      '/http_simple' : (context) => HttpSimple(),
-      '/http_github' : (context) => HttpGitHub(),
-    };
-  }
-  
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'EX: 3.2 - 4.1',
+      title: 'Flutter Demo',
       theme: ThemeData(
+        // This is the theme of your application.
+        //
+        // TRY THIS: Try running your application with "flutter run". You'll see
+        // the application has a blue toolbar. Then, without quitting the app,
+        // try changing the seedColor in the colorScheme below to Colors.green
+        // and then invoke "hot reload" (save your changes or press the "hot
+        // reload" button in a Flutter-supported IDE, or press "r" if you used
+        // the command line to start the app).
+        //
+        // Notice that the counter didn't reset back to zero; the application
+        // state is not lost during the reload. To reset the state, use hot
+        // restart instead.
+        //
+        // This works for code too, not just values: Most code changes can be
+        // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
-      routes: routes(),
     );
   }
 }
@@ -42,7 +47,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   String maReponse = "";
 
   @override
@@ -58,17 +62,15 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            ElevatedButton(
-                onPressed: (){
-                  Navigator.pushNamed(context, "/http_simple");
-                }, 
-                child: Text(HttpSimple().title)
-            ),
-            ElevatedButton(
-                onPressed: (){
-                  Navigator.pushNamed(context, "/http_github");
+            Text(maReponse),
+            ElevatedButton.icon(
+                onPressed: () async {
+                  Response res = await Dio().get("http://10.0.2.2:8080/test");
+                  maReponse = res.data;
+                  setState(() {});
                 },
-                child: Text(HttpGitHub().title)
+                icon: Icon(Icons.whatshot),
+                label: Text("Get that shit")
             )
           ],
         ),
