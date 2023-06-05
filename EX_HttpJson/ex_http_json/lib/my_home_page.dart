@@ -1,7 +1,7 @@
-import 'dart:convert';
-
-import 'package:dio/dio.dart';
+import 'package:ex_http_json/http_service.dart';
 import 'package:flutter/material.dart';
+
+import 'loader_dialog.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -14,36 +14,54 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  late Map? response;
-
-  Future<Null> getData() async{
-    try{
-      Response<Map> res = await Dio().get("https://api.ipify.org?format=json");
-      if(res.statusCode! > 199 && res.statusCode! < 300 ) response = res.data;
-      setState(() {});
-    }catch(e){
-      print(e);
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Erreur: ${e}")));
-    }
-  }
+  String simpleResponse = "";
+  Map<String, dynamic> jsonResponse = {};
 
   @override
   Widget build(BuildContext context) {
+    HttpService httpService = HttpService(context, "https://api.ipfy.org/");
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
       ),
       body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text( response != null ? response!["ip"] : "null"),
-              ElevatedButton.icon(
-                  onPressed: getData,
-                  icon: Icon(Icons.safety_check),
-                  label: Text("test")),
-            ],
-          )),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(simpleResponse),
+            ElevatedButton.icon(
+                onPressed: () async {
+                  showDialog(
+                      context: context,
+                      barrierDismissible: false,
+                      builder: (context) => const LoaderDialog()
+                  );
+                  simpleResponse = await httpService.getStringData();
+                  Navigator.pop(context);
+                  setState(() {});
+                },
+                icon: const Icon(Icons.link),
+                label: const Text("Simple data")
+            ),
+            Text( jsonResponse.isNotEmpty ? jsonResponse["ip"] : "null"),
+            ElevatedButton.icon(
+                onPressed: () async {
+                  showDialog(
+                      context: context,
+                      barrierDismissible: false,
+                      builder: (context) => const LoaderDialog()
+                  );
+                  jsonResponse = (await httpService.getJsonData("format", "json"))!;
+                  Navigator.pop(context);
+                  setState(() {});
+                },
+                icon: const Icon(Icons.link),
+                label: const Text("Json data")
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
+
