@@ -138,7 +138,6 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
           await signin("Bruno", "1234");
-          //await signup("Bruno", "1234");
           await Future.delayed(Duration(seconds: 3));
           await home();
         },
