@@ -1,0 +1,5 @@
+{
+  "appName": "Flutter Demo Hjemmeside",
+  "helloWorld": "Hei Verden!",
+  "hello": "Hallo {userName}"
+}

@@ -1,0 +1,5 @@
+{
+  "appName": "Flutter デモのホームページ",
+  "helloWorld": "「こんにちは世界」",
+  "hello": "こんにちは {userName}"
+}

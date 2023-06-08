@@ -1,0 +1,5 @@
+{
+  "appName": "Page d'accueil de la démo Flutter",
+  "helloWorld": "Bonjour le monde",
+  "hello": "Salut {userName}"
+}
