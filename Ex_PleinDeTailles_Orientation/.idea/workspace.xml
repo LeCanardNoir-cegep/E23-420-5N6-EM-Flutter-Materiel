@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb9be60f-79be-4766-84ca-cb2a2aca0beb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/plein_de_tailles/assets/images/elvis.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plein_de_tailles/lib/landscape_screen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plein_de_tailles/lib/my_card.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plein_de_tailles/lib/my_image.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plein_de_tailles/lib/portrait_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plein_de_tailles/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/plein_de_tailles/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plein_de_tailles/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/plein_de_tailles/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plein_de_tailles/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/plein_de_tailles/pubspec.yaml" afterDir="false" />
-    </list>
+    <list default="true" id="fb9be60f-79be-4766-84ca-cb2a2aca0beb" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
