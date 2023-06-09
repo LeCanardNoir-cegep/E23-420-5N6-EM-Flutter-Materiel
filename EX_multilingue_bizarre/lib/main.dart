@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
+// import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:multilingue_bizarre/multilingue_bizarre.dart';
 
 import 'home.dart';
 import 'home_l10n.dart';
@@ -16,17 +17,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      //onGenerateTitle: (context) => DemoLocalizations,
       title: 'Localizations Sample App',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightBlue),
-        useMaterial3: true,
+        //useMaterial3: true,
       ),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       // flutter gen-l10n
-
-      home: MyHomePageL10n(),
+      home: MultilingueBizarre(title: 'MultilingueBizarre',),
     );
   }
 }

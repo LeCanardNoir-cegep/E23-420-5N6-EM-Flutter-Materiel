@@ -1,5 +1,10 @@
 {
-  "appName": "Page d'accueil de la démo Flutter",
+  "appName": "Flutter Multilingue",
   "helloWorld": "Bonjour le monde",
-  "hello": "Salut {userName}"
+  "hello": "Salut {userName}",
+  "listChatFav": "Ma list de chat favoris",
+  "cat1": "chat stupide",
+  "cat2": "Le chat le plus stupide.",
+  "cat3": "le pire chat stupide.",
+  "cat4": "Trop stupide pour savoir quel est son genre."
 }

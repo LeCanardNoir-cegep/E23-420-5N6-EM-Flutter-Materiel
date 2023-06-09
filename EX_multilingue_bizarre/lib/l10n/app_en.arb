@@ -1,5 +1,10 @@
 {
-  "appName": "Flutter Demo Home Page",
+  "appName": "Flutter Multilingual",
+  "listChatFav": "My favorite cat list!",
+  "cat1": "Dumb cat.",
+  "cat2": "Most dumber cat.",
+  "cat3": "the worst dumber cat.",
+  "cat4": "Too stupid to know what is it its kind.",
   "helloWorld": "Hello World!",
   "@helloWorld": {
     "description": "The conventional newborn programmer greeting"

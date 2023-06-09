@@ -12,6 +12,7 @@ class _MyHomePageL10nState extends State<MyHomePageL10n> {
 
   @override
   Widget build(BuildContext context) {
+    var currentLocale = Localizations.localeOf(context).toString();
     var txt = AppLocalizations.of(context)!;
     return Scaffold(
         appBar: AppBar(
@@ -24,7 +25,7 @@ class _MyHomePageL10nState extends State<MyHomePageL10n> {
             Text(txt.hello("burN@")),
             Localizations.override(
               context: context,
-              locale: Locale('fr'),
+              locale: currentLocale == "ja" ? Locale('en') : Locale(currentLocale),
               child: Builder(builder: (
                   BuildContext context) => CalendarDatePicker(
                 initialDate: DateTime.now(),
@@ -33,7 +34,7 @@ class _MyHomePageL10nState extends State<MyHomePageL10n> {
                 onDateChanged: (value) {},
               )
               ),
-            )
+            ),
           ],
         )
     );

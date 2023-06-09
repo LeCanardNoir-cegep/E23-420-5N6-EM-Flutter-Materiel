@@ -1,5 +1,10 @@
 {
-  "appName": "Flutter デモのホームページ",
+  "appName": "フラッター多言語",
   "helloWorld": "「こんにちは世界」",
-  "hello": "こんにちは {userName}"
+  "hello": "こんにちは {userName}",
+  "listChatFav": "私のお気に入りのチャットリスト",
+  "cat1": "愚かな猫",
+  "cat2": "一番バカな猫。",
+  "cat3": "最悪のバカ猫。",
+  "cat4": "バカすぎて自分の性別も分からない。"
 }
