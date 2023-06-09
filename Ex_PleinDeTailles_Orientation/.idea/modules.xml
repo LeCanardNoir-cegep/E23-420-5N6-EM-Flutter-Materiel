@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/plein_de_tailles/plein_de_tailles.iml" filepath="$PROJECT_DIR$/plein_de_tailles/plein_de_tailles.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plein_de_tailles/android/plein_de_tailles_android.iml" filepath="$PROJECT_DIR$/plein_de_tailles/android/plein_de_tailles_android.iml" />
+    </modules>
+  </component>
+</project>
