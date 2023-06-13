@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a09aae0-9b86-428c-ac7b-73bc2f8fcb0c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ex_pas_mon_image/lib/http_service.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex_pas_mon_image/analysis_options.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/ex_pas_mon_image/analysis_options.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex_pas_mon_image/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/ex_pas_mon_image/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ex_pas_mon_image/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ex_pas_mon_image/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ex_pas_mon_image/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/ex_pas_mon_image/pubspec.yaml" afterDir="false" />
     </list>
@@ -16,6 +17,13 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
