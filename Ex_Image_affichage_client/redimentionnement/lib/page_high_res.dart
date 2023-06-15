@@ -3,16 +3,16 @@ import 'package:redimentionnement/nav_drawer.dart';
 
 import 'my_image.dart';
 
-class PageMedRes extends StatefulWidget {
-  const PageMedRes({super.key, required this.title});
+class PageHighRes extends StatefulWidget {
+  const PageHighRes({super.key, required this.title});
 
   final String title;
 
   @override
-  State<PageMedRes> createState() => _PageMedResState();
+  State<PageHighRes> createState() => _PageHighResState();
 }
 
-class _PageMedResState extends State<PageMedRes> {
+class _PageHighResState extends State<PageHighRes> {
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class _PageMedResState extends State<PageMedRes> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: MyImage.get(512)
+      body: MyImage.get(null)
     );
   }
 }

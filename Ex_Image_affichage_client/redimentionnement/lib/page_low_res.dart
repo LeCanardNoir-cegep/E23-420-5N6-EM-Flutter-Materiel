@@ -1,4 +1,6 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:redimentionnement/my_image.dart';
 import 'package:redimentionnement/nav_drawer.dart';
 
 class PageLowRes extends StatefulWidget {
@@ -20,7 +22,7 @@ class _PageLowResState extends State<PageLowRes> {
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           title: Text(widget.title),
         ),
-        body: Placeholder(),
+        body: MyImage.get(100)
     );
   }
 }

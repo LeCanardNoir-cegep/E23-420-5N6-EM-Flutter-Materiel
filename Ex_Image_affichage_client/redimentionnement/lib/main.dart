@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: APP_TITLE,
       theme: AppThemeData.basic,
-      home: const PageLowRes(title: "$APP_TITLE: home"),
+      home: const PageLowRes(title: "$APP_TITLE: low"),
       routes: AppRouter.routes,
     );
   }
