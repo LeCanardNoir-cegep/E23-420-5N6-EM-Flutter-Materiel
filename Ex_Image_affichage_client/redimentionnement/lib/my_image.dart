@@ -3,7 +3,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class MyImage{
-  static Widget get(int? width){
+  static Widget get(int? width, BoxFit fit){
     String param = (width != null) ? "?width=${width!.toStringAsFixed(0)}" : "";
 
     return Center(
@@ -14,6 +14,7 @@ class MyImage{
             imageUrl: "https://4n6.azurewebsites.net/exos/image$param",
             progressIndicatorBuilder: (context, url, download) => Center(child: CircularProgressIndicator(value: download.progress)),
             errorWidget: (context, url, error) => Center(child: Column(children: [Icon(Icons.error_outline), Text(error)],),),
+            fit: fit,
           )
         ],
       ),

@@ -22,7 +22,7 @@ class _PageLowResState extends State<PageLowRes> {
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           title: Text(widget.title),
         ),
-        body: MyImage.get(100)
+        body: MyImage.get(100, BoxFit.cover)
     );
   }
 }

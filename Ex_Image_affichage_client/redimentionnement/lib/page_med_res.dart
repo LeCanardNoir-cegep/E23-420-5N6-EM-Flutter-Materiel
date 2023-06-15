@@ -22,7 +22,7 @@ class _PageMedResState extends State<PageMedRes> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: MyImage.get(512)
+      body: MyImage.get(512, BoxFit.cover)
     );
   }
 }
