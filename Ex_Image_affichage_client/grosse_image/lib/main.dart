@@ -1,4 +1,7 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,13 +34,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
+  var urlImg = List<String>.generate(20, (i) => "https://4n6.azurewebsites.net/exos/image?width=${Random().nextInt(512)}");
 
   @override
   Widget build(BuildContext context) {
@@ -46,25 +43,16 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+      body: Container(
+        child: ListView.builder(
+            itemCount: urlImg.length,
+            itemBuilder: (context, index) => CachedNetworkImage(
+                imageUrl: urlImg[index],
+                progressIndicatorBuilder: (context, url, download) => SizedBox(height:200, child: Center(child: CircularProgressIndicator(value: download.progress,))),
+                errorWidget: (context, url, error) => Icon(Icons.error, color: Colors.red,),
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
+        )
+      )
     );
   }
 }
