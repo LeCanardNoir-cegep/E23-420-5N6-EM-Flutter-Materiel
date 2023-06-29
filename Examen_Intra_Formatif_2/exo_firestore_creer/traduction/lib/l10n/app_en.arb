@@ -1,0 +1,11 @@
+{
+  "helloWorld": "Hello World!",
+  "@helloWorld": {
+    "description": "Bored placeholder text"
+  },
+  "appname": "Red application",
+  "works" : "Works on smart phones",
+  "yes" : "yes",
+  "nobody" : "nobody",
+  "toaster" : "Toaster"
+}

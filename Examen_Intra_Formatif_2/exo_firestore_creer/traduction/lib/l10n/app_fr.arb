@@ -1,0 +1,11 @@
+{
+  "helloWorld": "Bonjour le monde!",
+  "@helloWorld": {
+    "description": "Vraiment poche comme texte de remplacement"
+  },
+  "appname": "Application rouge",
+  "works" : "Marche sur téléphone intelligent",
+  "yes" : "oui",
+  "nobody" : "personne",
+  "toaster" : "Grille-pain"
+}
